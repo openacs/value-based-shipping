@@ -1,6 +1,6 @@
 <master>
-  <property name="title">@title@</property>
-  <property name="context_bar"><table width="100%"><tbody><tr><td>@context_bar@</td><td align="right">[ <a href="/doc/value-based-shipping">help</a> ]</td></tr></tbody></table></property>
+  <property name="title">@title;noquote@</property>
+  <property name="context_bar"><table width="100%"><tbody><tr><td>@context_bar;noquote@</td><td align="right">[ <a href="/doc/value-based-shipping">help</a> ]</td></tr></tbody></table></property>
 
   <h3>Do you really want to delete this shipping rate?</h3>
   <blockquote>
