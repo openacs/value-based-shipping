@@ -54,7 +54,7 @@ if {[string equal $service_level_id {}]} {
 
     # The request didn't include a service level ID.
 
-    template::element::set_value level_edit service_level_id [db_nextval vbs_service_level_id_sequence]
+    template::element::set_value level_edit service_level_id [db_nextval vbs_service_level_id_seq]
 
 } else {
 

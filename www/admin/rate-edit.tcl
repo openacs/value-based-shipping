@@ -116,7 +116,7 @@ if {[string equal $shipping_rate_id {}]} {
 
     # The request didn't include a shipping rate ID.
 
-    template::element set_value rate_edit shipping_rate_id [db_nextval vbs_shipping_rate_id_sequence]
+    template::element set_value rate_edit shipping_rate_id [db_nextval vbs_shipping_rate_id_seq]
 
 } else {
 
