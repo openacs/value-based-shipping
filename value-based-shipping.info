@@ -7,7 +7,7 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
 
-    <version name="4.5b" url="http://openacs.org/repository/download/apm/value-based-shipping-4.5b.apm">
+    <version name="4.6" url="http://openacs.org/repository/download/apm/value-based-shipping-4.6.apm">
     <database-support>
         <database>oracle</database>
         <database>postgresql</database>
@@ -18,7 +18,7 @@
         <description format="text/plain">This package calculates the total shipping charges for all available service levels based on the total value of the shipment.</description>
 
         <requires url="ref-countries" version="0.1d"/>
-        <requires url="shipping-gateway" version="4.5b"/>
+        <requires url="shipping-gateway" version="4.6"/>
 
         <files>
             <file type="data_model_create" db_type="oracle" path="sql/oracle/value-based-shipping-create.sql"/>
