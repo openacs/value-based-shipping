@@ -13,9 +13,13 @@
         <database>postgresql</database>
     </database-support>
         <owner url="mailto:bart.teeuwisse@7-sisters.com">Bart Teeuwisse</owner>
-        <summary>This package calculates the total shipping charges based on the total value of the shipment.</summary>
+        <summary>Calculates the shipping charges based on the total value of the shipment.</summary>
         <release-date>2002-05-13</release-date>
-        <description format="text/plain">This package calculates the total shipping charges for all available service levels based on the total value of the shipment.</description>
+        <description format="text/plain">
+        This package calculates the total shipping charges for all
+        available service levels based on the total value of the shipment.  An
+        implementation of the shipping-gateway service contract.
+        </description>
 
         <requires url="ref-countries" version="0.1d"/>
         <requires url="shipping-gateway" version="4.6"/>
