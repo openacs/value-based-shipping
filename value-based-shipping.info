@@ -17,6 +17,7 @@
         <release-date>2002-05-13</release-date>
         <description format="text/plain">This package calculates the total shipping charges for all available service levels based on the total value of the shipment.</description>
 
+        <requires url="ref-countries" version="0.1d"/>
         <requires url="shipping-gateway" version="4.5b"/>
 
         <files>
