@@ -37,8 +37,8 @@
   <fullquery name="update_shipping_rate">      
     <querytext>
       update vbs_rates
-      select shipping_rate_id, service_level_id, country_iso, round(from_value, 2) as from_value, round(to_value, 2) as to_value, from_zip_code, to_zip_code, 
-          round(shipping_rate, 2) as shipping_rate 
+      set shipping_rate_id = :shipping_rate_id, service_level_id = :service_level_id, country_iso = :country_iso, from_value = :from_value,
+      to_value = :to_value, from_zip_code = :from_zip_code, to_zip_code = :to_zip_code, shipping_rate = :shipping_rate
       where shipping_rate_id = :shipping_rate_id
     </querytext>
   </fullquery>
