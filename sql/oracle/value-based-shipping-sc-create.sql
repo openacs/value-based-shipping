@@ -6,6 +6,7 @@ begin
   foo := acs_sc_impl.new(
            'ShippingGateway',                   -- impl_contract_name
            'value-based-shipping',              -- impl_name
+           'Value Based Shipping',              -- impl_pretty_name
            'value-based-shipping'               -- impl_owner_name
   );
 

@@ -13,12 +13,12 @@ begin
     'ServiceDescription'
   );
 
-  acs_sc_binding.delete(
+  acs_sc_binding.del(
     contract_name => 'ShippingGateway',
     impl_name => 'value-based-shipping'
   );
 
-  acs_sc_impl.delete(
+  acs_sc_impl.del(
     'ShippingGateway',
     'value-based-shipping'
   );
