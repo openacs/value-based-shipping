@@ -1,3 +1,12 @@
+ad_library { 
+
+    Value based shipping service contract routines
+
+    @author Bart Teeuwisse <bart.teeuwisse@7-sisters.com>
+    @creation-date May 2002
+    @cvs-id $Id$
+}
+
 ad_proc -public value_based_shipping.rates_and_services_selection {
     orig_country_iso
     orig_zip_code
