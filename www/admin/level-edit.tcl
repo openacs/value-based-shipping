@@ -42,13 +42,7 @@ template::form create level_edit -elements {
 	-datatype text \
 	-widget text \
 	-html {size 30 maxlength 20} \
-	-label "Service Level Code" \
-	-validate {service_code_check \
-		       {db_string service_code_check " \
-		            select case when (select count(*) \
-		            from vbs_service_levels \
-		       	    where service_level_code = :value) > 0 then 0 else 1 end"} \
-		       {Service Level Code has to be unique}}
+	-label "Service Level Code"
     service_level_description \
 	-datatype text \
 	-widget text \
@@ -75,31 +69,48 @@ if {[string equal $service_level_id {}]} {
 	} else {
 	    template::form set_values level_edit service_level
 	}
-    }
-
-    if {[form is_valid level_edit] } {
+    } elseif {[template::form is_submission level_edit] } {
 	template::form get_values level_edit service_level_id service_level_code service_level_description
+	set service_level_code_count [db_string service_code_check "
+	    select count(*)
+	    from vbs_service_levels
+	    where service_level_code = :service_level_code"]
 	if {[db_0or1row check_service_level "
-	    select service_level_id
+	    select service_level_code as orig_service_level_code
 	    from vbs_service_levels
 	    where service_level_id = :service_level_id"]} {
 
 	    # The user updated an existing service level.
 
-	    db_dml update_service_level "
-		update vbs_service_levels
-		set  service_level_code = :service_level_code, service_level_description = :service_level_description
-		where service_level_id = :service_level_id"
+	    if {($service_level_code_count != 0 && $service_level_code != $orig_service_level_code) ||
+		($service_level_code_count > 1 && $service_level_code == $orig_service_level_code)} {
+		template::element set_error level_edit service_level_code "
+		    Service Level Code has to be unique"
+		return
+	    } elseif {[template::form is_valid level_edit] } {
+
+		db_dml update_service_level "
+		    update vbs_service_levels
+		    set  service_level_code = :service_level_code, service_level_description = :service_level_description
+		    where service_level_id = :service_level_id"
+		template::forward levels
+	    }
 	} else {
 
 	    # The user entered a new service level.
 
-	    db_dml insert_service_level "
-		insert into vbs_service_levels
-		(service_level_id, service_level_code, service_level_description)
-		values
-		(:service_level_id, :service_level_code, :service_level_description)"
+	    if {$service_level_code_count != 0} {
+		template::element set_error level_edit service_level_code "
+		    Service Level Code has to be unique"
+		return
+	    } elseif {[template::form is_valid level_edit] } {
+		db_dml insert_service_level "
+		    insert into vbs_service_levels
+		    (service_level_id, service_level_code, service_level_description)
+		    values
+		    (:service_level_id, :service_level_code, :service_level_description)"
+		template::forward levels
+	    }
 	}
-	template::forward levels
     }
 }

@@ -21,7 +21,7 @@
 
   <fullquery name="check_service_level">      
     <querytext>
-      select service_level_id
+      select service_level_code as orig_service_level_code
       from vbs_service_levels
       where service_level_id = :service_level_id
     </querytext>
