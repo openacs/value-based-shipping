@@ -51,4 +51,4 @@ template::query get_shipping_rates shipping_rates multirow "
 	r.from_zip_code, r.to_zip_code, round(r.shipping_rate, 2) as shipping_rate
     from vbs_rates r left join countries c on (r.country_iso = c.iso), vbs_service_levels l
     where r.service_level_id = l.service_level_id
-    order by l.service_level_description, c.default_name, r.from_value"
+    order by l.service_level_description, c.default_name, r.from_value, coalesce(r.to_value, 0), coalesce(r.from_zip_code, '0')"

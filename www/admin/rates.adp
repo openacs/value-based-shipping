@@ -55,8 +55,8 @@
 	<td>@shipping_rates.to_zip_code@</td>
 	<td align="right">@shipping_rates.shipping_rate@</td>
 	<td width="30"></td>
-	<td>[ <a href="rate-edit?shipping_rate_id=@shipping_rates.shipping_rate_id@">edit</a> ]</td>
-	<td>[ <a href="rate-delete?shipping_rate_id=@shipping_rates.shipping_rate_id@">delete</a> ]</td>
+	<td>[&nbsp;<a href="rate-edit?shipping_rate_id=@shipping_rates.shipping_rate_id@">edit</a>&nbsp;]</td>
+	<td>[&nbsp;<a href="rate-delete?shipping_rate_id=@shipping_rates.shipping_rate_id@">delete</a>&nbsp;]</td>
       </tr>
       </multiple>
       <tr>
