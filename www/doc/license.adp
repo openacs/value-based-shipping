@@ -1,9 +1,7 @@
-<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> -->
-
 <master>
   <property name="title">@title@</property>
   <property name="signatory">@signatory@</property>
-  <property name="context">@context@</property>
+  <property name="context_bar">@context_bar@</property>
   <property name="header_stuff"><link href="index.css" type="text/css" rel="stylesheet"></property>
 
   <h2>GNU General Public License</h2>

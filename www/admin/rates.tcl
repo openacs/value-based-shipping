@@ -44,7 +44,7 @@ if {[db_0or1row package_name "
 
 # Set the context bar.
 
-set context [list "Shipping Rates"]
+set context_bar [ad_context_bar "Shipping Rates"]
 
 template::query get_shipping_rates shipping_rates multirow "
     select r.shipping_rate_id, l.service_level_description, c.default_name as country, round(r.from_value, 2) as from_value, round(r.to_value, 2) as to_value,

@@ -35,4 +35,4 @@ if {[db_0or1row package_name "
 
 # Set the context bar.
 
-set context [list]
+set context_bar [ad_context_bar]

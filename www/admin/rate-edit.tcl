@@ -32,7 +32,7 @@ if {[db_0or1row package_name "
 
 # Set the context bar.
 
-set context [list "Shipping Rates"]
+set context_bar [ad_context_bar [list rates "Shipping Rates"] Edit]
 
 template::form create rate_edit -elements {
     shipping_rate_id \

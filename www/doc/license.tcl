@@ -21,7 +21,7 @@ set title "$package_name License"
 
 # Set the context bar.
 
-set context [list [list . $package_name] License]
+set context_bar [ad_context_bar [list . $package_name] License]
 
 # Set signatory for at the bottom of the page
 

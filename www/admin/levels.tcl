@@ -38,7 +38,7 @@ if {[db_0or1row package_name "
 
 # Set the context bar.
 
-set context [list "Service Levels"]
+set context_bar [ad_context_bar "Service Levels"]
 
 template::query get_service_levels service_levels multirow "
     select *

@@ -32,7 +32,7 @@ if {[db_0or1row package_name "
 
 # Set the context bar.
 
-set context [list "Service Levels"]
+set context_bar [ad_context_bar [list levels "Service Levels"] Edit]
 
 template::form create level_edit -elements {
     service_level_id \

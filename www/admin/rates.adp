@@ -1,16 +1,6 @@
-<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> -->
-
 <master>
   <property name="title">@title@</property>
-  <property name="context">@context@</property>
-
-  <table width="100%">
-    <tbody>
-      <tr>
-	<td align="right">[ <a href="/doc/value-based-shipping">help</a> ]</td>
-      </tr>
-    </tbody>
-  </table>
+  <property name="context_bar"><table width="100%"><tbody><tr><td>@context_bar@</td><td align="right">[ <a href="/doc/value-based-shipping">help</a> ]</td></tr></tbody></table></property>
 
   <h3>Defined shipping rates</h3>
   <blockquote>
