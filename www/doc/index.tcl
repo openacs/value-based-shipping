@@ -9,7 +9,7 @@ ad_page_contract {
 } {
 } -properties {
     title:onevalue
-    context_bar:onevalue
+    context:onevalue
 }
 
 # Authenticate the user
@@ -37,7 +37,7 @@ set shipping_gateway_installed [apm_package_installed_p "shipping-gateway"]
 
 # Set the context bar.
 
-set context_bar [ad_context_bar $package_name]
+set context [list $package_name]
 
 # Set signatory for at the bottom of the page
 

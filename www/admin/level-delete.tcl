@@ -32,7 +32,7 @@ if {[db_0or1row package_name "
 
 # Set the context bar.
 
-set context_bar [ad_context_bar]
+set context [list]
 
 template::form create level_delete -elements {
     service_level_id \

@@ -9,7 +9,7 @@ ad_page_contract {
 } {
 } -properties {
     title:onevalue
-    context_bar:onevalue
+    context:onevalue
 }
 
 # Authenticate the user
@@ -21,7 +21,7 @@ set title "$package_name License"
 
 # Set the context bar.
 
-set context_bar [ad_context_bar [list . $package_name] License]
+set context [list [list . $package_name] License]
 
 # Set signatory for at the bottom of the page
 

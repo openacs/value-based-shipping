@@ -11,7 +11,7 @@ ad_page_contract {
 } {
 } -properties {
     title:onevalue
-    context_bar:onevalue
+    context:onevalue
 }
 
 # Authenticate the user
@@ -38,7 +38,7 @@ if {[db_0or1row package_name "
 
 # Set the context bar.
 
-set context_bar [ad_context_bar "Service Levels"]
+set context [list "Service Levels"]
 
 template::query get_service_levels service_levels multirow "
     select *

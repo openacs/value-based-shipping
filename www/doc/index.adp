@@ -3,23 +3,20 @@
 <master>
   <property name="title">@title@</property>
   <property name="signatory">@signatory@</property>
+  <property name="context">@context@</property>
   <property name="header_stuff"><link href="index.css" type="text/css" rel="stylesheet"></property>
 
-  <h2>@title@</h2>
+  <if @admin_p@ and @value_based_shipping_mounted@>
   <table width="100%">
     <tbody>
       <tr>
-	<td align="left">@context_bar@</td>
 	<td align="right">
-          <if @admin_p@ and @value_based_shipping_mounted@>
             [ <a href="@package_url@admin/">Administer</a> ]
-          </if>
         </td>
       </tr>
     </tbody>
   </table>
-  <hr>
-
+  </if>
   <h2>Why</h2>
 
   <p>@package_name@ provides a simple yet flexible way to maintain a

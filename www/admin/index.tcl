@@ -8,7 +8,7 @@ ad_page_contract {
 } {
 } -properties {
     title:onevalue
-    context_bar:onevalue
+    context:onevalue
 }
 
 # Authenticate the user
@@ -35,4 +35,4 @@ if {[db_0or1row package_name "
 
 # Set the context bar.
 
-set context_bar [ad_context_bar]
+set context [list]
