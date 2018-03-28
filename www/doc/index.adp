@@ -27,7 +27,7 @@
   ecommerce code or an <a href="/doc/acs-service-contract">ACS Service
   Contract API</a> based solution. Opting for flexibility and
   re-usability <a href="mailto:bart.teeuwisse@7-sisters.com">Bart
-  Teeuwisse</a> developped the <if @shipping_gateway_installed@ eq
+  Teeuwisse</a> developed the <if @shipping_gateway_installed@ eq
   1><a href="/doc/shipping-gateway"></if>Shipping Service Contract<if
   @shipping_gateway_installed@ eq 1></a></if>.</p>
 
