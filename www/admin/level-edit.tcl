@@ -65,7 +65,7 @@ if {[string equal $service_level_id {}]} {
 	    select service_level_id, service_level_code, service_level_description
 	    from vbs_service_levels
 	    where service_level_id = :service_level_id"]} {
-	    request error invalid_service_level_id "Invalid Sevice Level ID"
+	    request error invalid_service_level_id "Invalid Service Level ID"
 	} else {
 	    template::form set_values level_edit service_level
 	}

@@ -45,7 +45,7 @@ if {[template::form is_request level_delete]} {
 	select service_level_id, service_level_code, service_level_description
 	from vbs_service_levels
 	where service_level_id = :service_level_id"]} {
-	request error invalid_service_level_id "Invalid Sevice Level ID"
+	request error invalid_service_level_id "Invalid Service Level ID"
     } else {
 	template::element set_value level_delete service_level_id $service_level_id
     }
